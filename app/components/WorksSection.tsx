@@ -53,7 +53,7 @@ export default function WorksSection() {
   }
 
   return (
-    <div className="carousel-center carousel h-full w-full">
+    <div className="carousel carousel-center h-full w-full">
       {loading ? (
         <Loading />
       ) : (
@@ -81,7 +81,7 @@ export default function WorksSection() {
               </div>
 
               <div className="p-nav group flex flex-col items-center justify-center gap-y-4">
-                <div className="h-16 border-r group-hover:h-24" />
+                <div className="h-16 border-r transition-all duration-300 ease-in-out group-hover:h-24" />
                 {index < chunkedItems.length - 1 && (
                   <CarouselButton
                     text="More"
@@ -103,7 +103,7 @@ export default function WorksSection() {
                     href="#works-0"
                   />
                 )}
-                <div className="h-16 border-r group-hover:h-24" />
+                <div className="h-16 border-r transition-all duration-300 ease-in-out group-hover:h-24" />
               </div>
             </div>
           ))}

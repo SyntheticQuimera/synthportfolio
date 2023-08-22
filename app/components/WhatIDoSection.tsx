@@ -7,11 +7,11 @@ interface ListItemProps {
 
 const ListItem = ({ title, desc }: ListItemProps) => {
   return (
-    <li className="group relative flex w-full items-center overflow-hidden ">
-      <span className="ml-2 text-7xl font-bold uppercase group-hover:text-primary-content lg:ml-4 lg:text-8xl xl:text-9xl">
+    <li className="group relative flex w-full items-center overflow-hidden">
+      <span className="ml-2 text-7xl font-bold uppercase transition-all duration-300 ease-in-out group-hover:text-primary-content lg:ml-4 lg:text-8xl xl:text-9xl">
         {title}
       </span>
-      <div className="absolute z-[-1] flex h-full w-0 items-center justify-end bg-primary pr-[1px] text-primary-content group-hover:w-full">
+      <div className="absolute z-[-1] flex h-full w-0 items-center justify-end bg-primary pr-[1px] text-primary-content transition-all duration-300 ease-in-out group-hover:w-full">
         <span className="mr-2 hidden w-64 text-xs font-semibold opacity-0 group-hover:opacity-100 group-hover:sm:block lg:mr-4 lg:w-96 xl:text-sm">
           {desc}
         </span>

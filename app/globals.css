@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  @apply transition-all ease-in-out duration-300
-}
-
-
 .p-nav{
 @apply p-3 lg:p-6 xl:p-8
 }
