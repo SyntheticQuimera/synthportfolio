@@ -15,33 +15,33 @@ export default function WorksSection() {
   const [works, setWorks] = useState<Work[]>([]);
   const [loading, setLoading] = useState(true);
 
-  async function getWorks() {
-    try {
-      const response = await databases.listDocuments(
-        process.env.NEXT_PUBLIC_DATABASE_ID!,
-        process.env.NEXT_PUBLIC_WORKS_COLLECTION_ID!,
-      );
-
-      const appwriteDocuments: Models.Document[] = response.documents;
-
-      // Transform Appwrite documents to Works format
-      const transformedWorks: Work[] = appwriteDocuments.map((doc) => ({
-        title: doc.title,
-        logo: doc.logo,
-        desc: doc.desc,
-        stack: doc.stack,
-        image: doc.image,
-        id: doc.$id,
-      }));
-
-      setWorks(transformedWorks);
-      setLoading(false);
-    } catch (error) {
-      console.log(error); // Handle error
-    }
-  }
-
   useEffect(() => {
+    async function getWorks() {
+      try {
+        const response = await databases.listDocuments(
+          process.env.NEXT_PUBLIC_DATABASE_ID!,
+          process.env.NEXT_PUBLIC_WORKS_COLLECTION_ID!,
+        );
+
+        const appwriteDocuments: Models.Document[] = response.documents;
+
+        // Transform Appwrite documents to Works format
+        const transformedWorks: Work[] = appwriteDocuments.map((doc) => ({
+          title: doc.title,
+          logo: doc.logo,
+          desc: doc.desc,
+          stack: doc.stack,
+          image: doc.image,
+          id: doc.$id,
+        }));
+
+        setWorks(transformedWorks);
+        setLoading(false);
+      } catch (error) {
+        console.log(error); // Handle error
+      }
+    }
+
     getWorks();
   }, []);
 
@@ -53,7 +53,7 @@ export default function WorksSection() {
   }
 
   return (
-    <div className="carousel carousel-center h-full w-full">
+    <div className="carousel-center carousel h-full w-full">
       {loading ? (
         <Loading />
       ) : (

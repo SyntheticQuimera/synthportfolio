@@ -1,7 +1,11 @@
 "use client";
 import AnimatedBackground from "@/app/components/AnimatedBackground";
 import Navigation from "@/app/components/Navigation";
-import AnimatedCursor from "react-animated-cursor";
+import dynamic from "next/dynamic";
+
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
 
 export default function RootLayout({
   children,
