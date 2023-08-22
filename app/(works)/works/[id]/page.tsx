@@ -12,23 +12,24 @@ export default function WorkPage({ params }: { params: { id: string } }) {
   const [work, setWork] = useState<Models.Document | null>(null);
   const [loading, setLoading] = useState(true);
 
-  async function getWorks() {
-    try {
-      const response = await databases.getDocument(
-        process.env.NEXT_PUBLIC_DATABASE_ID!,
-        process.env.NEXT_PUBLIC_WORKS_COLLECTION_ID!,
-        params.id,
-      );
-
-      setWork(response);
-      setLoading(false);
-    } catch (error) {
-      console.log(error); // Handle error
-    }
-  }
   useEffect(() => {
+    async function getWorks() {
+      try {
+        const response = await databases.getDocument(
+          process.env.NEXT_PUBLIC_DATABASE_ID!,
+          process.env.NEXT_PUBLIC_WORKS_COLLECTION_ID!,
+          params.id,
+        );
+
+        setWork(response);
+        setLoading(false);
+      } catch (error) {
+        console.log(error); // Handle error
+      }
+    }
+
     getWorks();
-  }, []);
+  }, [params.id]);
 
   return (
     <>
@@ -65,8 +66,11 @@ export default function WorkPage({ params }: { params: { id: string } }) {
                     </div>
                   )}
                   <div className="card-actions">
-                    {work?.stack.map((t: string) => (
-                      <div className="badge badge-primary rounded-badge text-xs font-semibold">
+                    {work?.stack.map((t: string, index: any) => (
+                      <div
+                        key={index}
+                        className="badge badge-primary rounded-badge text-xs font-semibold"
+                      >
                         {t}
                       </div>
                     ))}

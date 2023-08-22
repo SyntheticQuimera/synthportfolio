@@ -22,8 +22,11 @@ export default function WorkCard({
           {title}
         </div>
         <div className="card-actions">
-          {stack?.map((t) => (
-            <div className="badge badge-primary rounded-badge text-xs font-semibold">
+          {stack?.map((t, index) => (
+            <div
+              key={index}
+              className="badge badge-primary rounded-badge text-xs font-semibold"
+            >
               {t}
             </div>
           ))}

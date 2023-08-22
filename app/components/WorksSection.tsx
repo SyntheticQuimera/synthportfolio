@@ -40,6 +40,7 @@ export default function WorksSection() {
       console.log(error); // Handle error
     }
   }
+
   useEffect(() => {
     getWorks();
   }, []);
