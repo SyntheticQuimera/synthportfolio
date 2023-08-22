@@ -35,7 +35,7 @@ export default function WorkPage({ params }: { params: { id: string } }) {
     <>
       <Heading title={work?.title} />
 
-      <div className="flex h-screen items-center justify-center">
+      <main className="flex h-screen items-center justify-center">
         {loading ? (
           <Loading />
         ) : (
@@ -107,7 +107,7 @@ export default function WorkPage({ params }: { params: { id: string } }) {
             </div>
           </>
         )}
-      </div>
+      </main>
     </>
   );
 }
