@@ -88,6 +88,7 @@ export default function WorkPage({ params }: { params: { id: string } }) {
                   </div>
                   <div className="card-actions mt-auto flex-row justify-end lg:flex-col">
                     <Link
+                    target="_blank"
                       href={work?.repository}
                       className="btn btn-primary btn-sm w-fit lg:btn-md lg:w-full"
                     >
@@ -95,6 +96,7 @@ export default function WorkPage({ params }: { params: { id: string } }) {
                       Repository
                     </Link>
                     <Link
+                    target="_blank"
                       href={work?.demo}
                       className="btn btn-primary btn-sm w-fit lg:btn-md lg:w-full"
                     >
