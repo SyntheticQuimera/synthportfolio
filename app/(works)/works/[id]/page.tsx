@@ -83,22 +83,22 @@ export default function WorkPage({ params }: { params: { id: string } }) {
                   <div className="card-title text-lg uppercase lg:text-2xl">
                     Information
                   </div>
-                  <div className="card-actions text-sm">
+                  <div className="card-actions text-xs md:text-sm">
                     <p>{work?.desc}</p>
                   </div>
                   <div className="card-actions mt-auto flex-row justify-end lg:flex-col">
                     <Link
-                    target="_blank"
+                      target="_blank"
                       href={work?.repository}
-                      className="btn btn-primary btn-sm w-fit lg:btn-md lg:w-full"
+                      className="btn btn-primary btn-sm w-fit text-xs lg:btn-md md:text-sm lg:w-full"
                     >
                       <PiGithubLogoBold size={18} />
                       Repository
                     </Link>
                     <Link
-                    target="_blank"
+                      target="_blank"
                       href={work?.demo}
-                      className="btn btn-primary btn-sm w-fit lg:btn-md lg:w-full"
+                      className="btn btn-primary btn-sm w-fit text-xs lg:btn-md md:text-sm lg:w-full"
                     >
                       <PiPlanetBold size={18} />
                       Web Demo
