@@ -14,7 +14,7 @@ export default function WorkCard({
   return (
     <Link
       href={`${"/works/" + id}`}
-      className="cursor-button-card card w-full flex-1 border bg-transparent text-start text-secondary-content backdrop-blur-md"
+      className="cursor-button-card card card-compact w-full flex-1 border bg-transparent text-start text-secondary-content backdrop-blur-md"
     >
       <div className="card-body p-5 lg:p-8">
         <div className="card-title lg:text-3xl">

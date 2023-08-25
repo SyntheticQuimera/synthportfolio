@@ -41,9 +41,9 @@ export default function WorkPage({ params }: { params: { id: string } }) {
         ) : (
           <>
             <div className="p-section grid h-screen w-full grid-flow-col grid-cols-none grid-rows-3 gap-4 overflow-auto lg:grid-flow-row lg:grid-cols-3 lg:grid-rows-none lg:overflow-hidden">
-              <div className="card row-span-2 border bg-transparent backdrop-blur-md lg:col-span-2 lg:row-auto">
+              <div className="card card-compact row-span-2 border bg-transparent backdrop-blur-md lg:col-span-2 lg:row-auto">
                 <div className="card-body p-5 lg:p-8">
-                  <div className="card-title text-lg uppercase lg:text-2xl">
+                  <div className="card-title text-base uppercase lg:text-2xl">
                     Showcase
                   </div>
                   {work?.video ? (
@@ -78,9 +78,9 @@ export default function WorkPage({ params }: { params: { id: string } }) {
                 </div>
               </div>
 
-              <div className="card row-span-1  border bg-transparent backdrop-blur-md lg:col-span-1 lg:row-auto">
+              <div className="card-compact card row-span-1  border bg-transparent backdrop-blur-md lg:col-span-1 lg:row-auto">
                 <div className="card-body p-5 lg:p-8">
-                  <div className="card-title text-lg uppercase lg:text-2xl">
+                  <div className="card-title text-base uppercase lg:text-2xl">
                     Information
                   </div>
                   <div className="card-actions text-xs md:text-sm">
