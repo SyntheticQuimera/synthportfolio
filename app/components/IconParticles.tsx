@@ -14,7 +14,7 @@ import { SiApollographql } from "react-icons/si";
 
 export default function IconParticles() {
   return (
-    <div className="particles-icons">
+    <div className="particles-icons opacity-40">
       <DiJavascript className="particle-icon" />
       <BiLogoTailwindCss className="particle-icon" />
       <DiCss3 className="particle-icon" />
