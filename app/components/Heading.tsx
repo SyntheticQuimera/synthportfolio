@@ -15,7 +15,7 @@ export default function Heading({ title }: HeadingProps) {
         <div className="border-b lg:w-36 xl:w-96" />
       </div>
       <div className="absolute top-0 flex h-screen font-bold uppercase lg:hidden">
-        <div className="flex w-12 items-center justify-center">
+        <div className="flex w-10 items-center justify-center">
           <h1 className="-rotate-90 whitespace-nowrap text-lg -tracking-[-0.3em]">
             {title}
           </h1>
